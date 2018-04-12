@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'Georgia';
+    src: url('../fonts/Georgia.eot');
+    src: url('../fonts/Georgia.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Georgia.woff2') format('woff2'),
+        url('../fonts/Georgia.woff') format('woff'),
+        url('../fonts/Georgia.ttf') format('truetype'),
+        url('../fonts/Georgia.svg#Georgia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;}
+header {
+	display: flex;
+	height: 835px;
+	width: 100%;
+	background: url(../img/based.jpg) no-repeat top;
+	background-size: cover;
+	
+}
+.nav {
+	display: flex;
+	align-self: flex-end;
+	height: 65px;
+	background-color: #2c3e50;
+	width: 100%;
+	padding: 0 20.75%;
+	justify-content: space-between;
+	align-items: center;
+}
+.navlist {
+	display: flex;
+	/*align-self: center;*/
+	justify-content: space-between;
+	width: 660px;
+}
+.navlist li, .hiddenMenu li {
+	color: #527393; 
+	list-style: none;
+	font-size: 15px;
+	
+}
+.navlist li:hover, .hiddenMenu li:hover {
+	color: white;
+}
+.button {
+	background-color: #e74c3c;
+	color: white;
+	border-radius: 4px;
+	text-decoration: none;
+	line-height: 38px
+}
+.signup {
+	padding: 0 25px;
+	font-size: 15px;
+}
+@media all and (max-width:1550px) {
+	.nav {
+		padding: 0 15%;
+	}
+}
+@media all and (min-width:100px) and (max-width:1280px) {
+	.nav {
+		padding: 0 5%;
+	}
+}
+@media all and (max-width:1000px){
+	.navlist  {
+		display: none;
+	}
+
+	.nav {
+		position: relative;
+		
+	}
+	.hiddenMenu {
+		position: absolute;
+		top: 65px;
+		margin: 0;
+		padding: 0;
+		
+	}
+	.hiddenMenu li {
+		background: lightgrey;
+		line-height: 2;
+		padding: 0 20px;
+		border-bottom: 2px solid lightgrey;
+		margin:0;
+		cursor: pointer;
+	}
+	.hiddenMenu li:hover {
+		border-bottom: 2px solid white;
+	}
+}
+
+.about {
+	text-align: center;
+	color: #a5aab0;
+	margin-bottom: 70px;
+}
+h2 {
+	font-family: 'Open Sans',sans-serif;
+	color:#e74c3c;
+	margin-top: 65px;
+	font-size: 50px;
+	font-weight: normal;
+}
+.about h3 {
+	font-size:30px;
+	font-weight: 300;
+} 
+.about p{
+	font-family:'Georgia';
+	font-style: italic;
+	font-size: 20px;
+}
+.about figure {
+	display: inline-block;
+	width: 250px;
+}
+.about figure p {
+	font-size: 15px;
+}
+.about figcaption  {
+	font-size: 20px;
+	font-weight: 600;
+	margin-top: 20px;
+}
+.about .more {
+	padding: 5px 40px;
+	font-size: 18px;
+}
+
+.skills {
+	background: url(../img/procent.png) no-repeat top;
+	background-size: cover; 
+	min-height: 585px;
+	width: 100%;
+}
+.skills h2 {
+	color: white;
+	padding-top: 80px;
+}
+
+.skillsFlex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+
+}
+.portfolio a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #707070
+}
+.img {
+	display:flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.img div {
+	width: 401px;
+	height:302px;
+}
+ 
+.img1, .img13 {
+	background:url(../img/pic-1-13.png) no-repeat center;
+} 
+.img2, .img14 {
+	background:url(../img/pic-2-14.png) no-repeat center;
+}
+.img3, .img15 {
+	background:url(../img/pic-3-15.png) no-repeat center;
+}
+.img4 {
+	background:url(../img/pic-4.png) no-repeat center;
+}
+.img5 {
+	background:url(../img/pic-5.png) no-repeat center;
+}
+.img6  {
+	background:url(../img/pic-6.png) no-repeat center;
+}
+.img7 {
+	background:url(../img/pic-7.png) no-repeat center;
+}
+.img8 {
+	background:url(../img/pic-8.png) no-repeat center;
+}
+.img9 {
+	background:url(../img/pic-9.png) no-repeat center;
+}
+.img10 {
+	background:url(../img/pic-10.png) no-repeat center;
+}
+.img11 {
+	background:url(../img/pic-11.png) no-repeat center;
+}
+.img12 {
+	background:url(../img/pic-12.png) no-repeat center;
+}
+.img15 {
+	margin-bottom: 70px;
+}
+.email {
+	background: #2c3e50;
+	color: white;
+	font-weight: lighter;
+}
+.email p:last-of-type {
+	font-size: 15px;
+}
+.email p:first-of-type {
+	font-size: 30px;
+	padding-top: 45px;
+}
+.email button {
+	border: 0;
+	padding: 4px 20px;
+	font-size: 18px;
+}
+.email button:focus {
+	outline: none;
+}
+form [name="email"] {
+	font-size: 15px;
+	font-weight: normal;
+	height: 46px;
+	width: 20.4%;
+	min-width: 208px;
+	border: 0;
+	padding: 0 0 0 15px;
+	border-radius: 4px;
+	margin: 10px 25px 60px 0;
+}
+.team p{
+	font-family:'Georgia';
+	font-style: italic;
+	font-size: 20px;
+	color: #a5aab0;
+}
+.team figure {
+	display: inline-block;
+	width: 215px;
+}
+.team figcaption {
+	font-size: 20px;
+	color: #a5aab0;
+	font-weight: 600;
+}
+.team span {
+	font-size: 15px;
+	color:#e74c3c;
+}
+.team img {
+	margin-bottom: 15px;
+}
+.footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 80px;
+	background-color: #2c3e50;
+	margin-top: 50px;
+	
+}
+.footer .left {
+	margin:0 auto;
+	font-size: 15px;
+	color: white;
+	font-weight: 300;
+}
+.footer .right {
+	margin:0 auto;
+	font-size: 20px;
+	color: #677d93;
+	font-weight: 400;
+}
+.right a{
+	text-decoration: none;
+}
+.right a:link {
+	color:#677d93;
+}
+.right a:visited {
+color:#677d93;
+}
+
+.svg-inline--fa {
+    padding: 0 8px;   
+}
+/
