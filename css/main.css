@@ -167,7 +167,13 @@ h2 {
 	width: 401px;
 	height:302px;
 }
- 
+
+.imgs div {
+	flex-basis: 20%;
+	height: 302px;
+
+}
+
 .img1, .img13 {
 	background:url(../img/pic-1-13.png) no-repeat center;
 } 
