@@ -156,14 +156,14 @@ h2 {
 	font-size: 20px;
 	color: #707070
 }
-.img {
+.imgs {
 	display:flex;
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
-.img div {
+.imgs div {
 	width: 401px;
 	height:302px;
 }
