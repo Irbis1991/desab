@@ -32,7 +32,6 @@ header {
 }
 .navlist {
 	display: flex;
-	/*align-self: center;*/
 	justify-content: space-between;
 	width: 660px;
 }
@@ -45,6 +44,10 @@ header {
 .navlist li:hover, .hiddenMenu li:hover {
 	color: white;
 }
+.hiddenMenu {
+	position:absolute;
+	left: 5%;
+}
 .button {
 	background-color: #e74c3c;
 	color: white;
@@ -56,44 +59,7 @@ header {
 	padding: 0 25px;
 	font-size: 15px;
 }
-@media all and (max-width:1550px) {
-	.nav {
-		padding: 0 15%;
-	}
-}
-@media all and (min-width:100px) and (max-width:1280px) {
-	.nav {
-		padding: 0 5%;
-	}
-}
-@media all and (max-width:1000px){
-	.navlist  {
-		display: none;
-	}
 
-	.nav {
-		position: relative;
-		
-	}
-	.hiddenMenu {
-		position: absolute;
-		top: 65px;
-		margin: 0;
-		padding: 0;
-		
-	}
-	.hiddenMenu li {
-		background: lightgrey;
-		line-height: 2;
-		padding: 0 20px;
-		border-bottom: 2px solid lightgrey;
-		margin:0;
-		cursor: pointer;
-	}
-	.hiddenMenu li:hover {
-		border-bottom: 2px solid white;
-	}
-}
 
 .about {
 	text-align: center;
@@ -154,18 +120,21 @@ h2 {
 .portfolio a{
 	text-decoration: none;
 	font-size: 20px;
-	color: #707070
-}
+	color: #707070;
+	
+	}
 .imgs {
 	display:flex;
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	margin-top: 10px;
 }
 
-.imgs div {
-	width: 401px;
-	height:302px;
+.img{
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
 }
 
 .imgs div {
@@ -268,7 +237,8 @@ form [name="email"] {
 }
 .footer {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	flex-wrap: wrap-reverse;
 	align-items: center;
 	min-height: 80px;
 	background-color: #2c3e50;
@@ -276,19 +246,20 @@ form [name="email"] {
 	
 }
 .footer .left {
-	margin:0 auto;
 	font-size: 15px;
 	color: white;
 	font-weight: 300;
+	margin: 0 5%;
 }
-.footer .right {
-	margin:0 auto;
+.footer .right { 
 	font-size: 20px;
 	color: #677d93;
 	font-weight: 400;
+	margin: 0 5%;
 }
 .right a{
 	text-decoration: none;
+
 }
 .right a:link {
 	color:#677d93;
@@ -300,4 +271,48 @@ color:#677d93;
 .svg-inline--fa {
     padding: 0 8px;   
 }
-/
+@media all and (max-width:1550px) {
+	.nav {
+		padding: 0 15%;
+	}
+}
+@media all and (max-width:1280px) {
+	.nav {
+		padding: 0 5%;
+	}
+}
+@media all and (max-width:1024px){
+	.navlist  {
+		display: none;
+	}
+
+	.nav {
+		position: relative;
+		
+	}
+	.hiddenMenu {
+		position: absolute;
+		top: 65px;
+		margin: 0;
+		padding: 0;
+		
+	}
+	.hiddenMenu li {
+		background: lightgrey;
+		line-height: 2;
+		padding: 0 20px;
+		border-bottom: 2px solid lightgrey;
+		margin:0;
+		cursor: pointer;
+	}
+	.hiddenMenu li:hover {
+		border-bottom: 2px solid white;
+	}
+
+	.imgs div {
+		flex-basis: 33.33%;
+		height: 302px;
+
+}
+
+}
