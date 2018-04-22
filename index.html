@@ -91,7 +91,7 @@
 			<a href="#">illustations /</a>
 			<a href="#">Logo /</a>
 			<a href="#">Photo </a>
-			<div class="imgs">
+			<!-- <div class="imgs">
 				<div class="img1">   </div>
 				<div class="img2"></div>
 				<div class="img3"></div>
@@ -107,6 +107,22 @@
 				<div class="img13"></div>
 				<div class="img14"></div>
 				<div class="img15"></div>
+			</div> -->
+			<div class="slider">
+				<ul>
+					<li><img src="./img/pic-1-13.png" alt=""></li>
+					<li><img src="./img/pic-2-14.png" alt=""></li>
+					<li><img src="./img/pic-3-15.png" alt=""></li>
+					<li><img src="./img/pic-4.png" alt=""></li>
+					<li><img src="./img/pic-5.png" alt=""></li>
+					<li><img src="./img/pic-6.png" alt=""></li>
+					<li><img src="./img/pic-7.png" alt=""></li>
+					<li><img src="./img/pic-9.png" alt=""></li>
+					<li><img src="./img/pic-10.png" alt=""></li>
+					<li><img src="./img/pic-11.png" alt=""></li>
+					<li><img src="./img/pic-12.png" alt=""></li>
+					
+				</ul>
 			</div>
 			<div class=email>
 				<p>Get our newsletter and be the first to know!</p>
@@ -169,7 +185,7 @@
 
 		</section>
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('#menus').on('click', function(){
@@ -185,5 +201,32 @@
 			})
 			
 		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			 $(".slider").each(function () { // обрабатываем каждый слайдер
+			  var obj = $(this);
+			  $(obj).append("<div class='navs'></div>");
+			  $(obj).find("li").each(function () {
+			   $(obj).find(".navs").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+			   $(this).addClass("slider"+$(this).index());
+			  });
+			  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
+			 });
+			});
+			function sliderJS (obj, sl) { // slider function
+			 var ul = $(sl).find("ul"); // находим блок
+			 var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
+			 var step = $(bl).width(); // ширина объекта
+			 $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
+			}
+			$(document).on("click", ".slider .navs span", function() { // slider click navigate
+			 var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+			 $(sl).find("span").removeClass("on"); // убираем активный элемент
+			 $(this).addClass("on"); // делаем активным текущий
+			 var obj = $(this).attr("rel"); // узнаем его номер
+			 sliderJS(obj, sl); // слайдим
+			 return false;
+			});
+</script>
 	</body>
 </html>
